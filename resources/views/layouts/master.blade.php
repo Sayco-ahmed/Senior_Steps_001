@@ -6,6 +6,7 @@
 
 @include('layouts.header')
 
+@yield('breadcome-area')
 
 @yield('maincontent')
 

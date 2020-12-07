@@ -4787,6 +4787,11 @@ div#sparklinehome canvas {
 	background-color: rgba(139,0,0,.7);
     border-color: rgba(139,0,0,.7);
 }
+.info-md button{
+	background-color: rgba(139,0,0,.7);
+    border-color: rgba(139,0,0,.7);
+    padding: 10px 20px;
+}
 .warning-md a{
 	background-color: #65b12d;
     border-color: #65b12d;

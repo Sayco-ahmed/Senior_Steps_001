@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Route::group(['namespace' => 'Pages'], function () {
+//     Route::resource('/branch', 'BranchController');
+    
+// });
+
+
+Route::namespace('Pages')->group(function () {
+    Route::resource('/branch', 'BranchController');
+});
