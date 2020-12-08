@@ -10,19 +10,11 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="breadcome-list">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right">
-                            <div class="breadcome-heading pull-right">
-                                <form role="search" class="sr-input-func">
-                                    <input type="text" placeholder="...search " class="search-int form-control"
-                                        style="text-align:left" name="branch_search">
-                                    <a href="#"><i class="fa fa-search"></i></a>
-                                </form>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
                             <ul class="breadcome-menu pull-left" style="direction: ltr;">
                                 <li>
-                                    <a href="index.html"> Home </a><span class="bread-slash"> / </span>
+                                    <a href="{{route('branch.index')}}"> All Branches </a><span class="bread-slash"> / </span>
                                 </li>
                                 <li>
                                     <span class="bread-blod"> Branch View </span>
@@ -46,7 +38,7 @@
             <div class="col-lg-6 col-lg-offset-3 col-sm-12 col-xs-12" style="margin-bottom: 20px;">
                 <div class="profile-info-inner">
                     <div class="profile-img">
-                        <img src="{{asset('img/profile/1.jpg')}}" alt="" />
+                        <img src="{{asset('uploads/branch/' . $requested_branch->branchImg)}}" alt="" />
                     </div>
                     <div class="profile-details-hr">
                         
@@ -87,11 +79,11 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                            {{-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                                 <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
                                     <p><b>Google Map </b><br /> {{$requested_branch->branchMapUrl}}</p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         
                     </div>

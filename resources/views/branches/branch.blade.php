@@ -24,7 +24,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
                             <ul class="breadcome-menu pull-left" style="direction: ltr;">
                                 <li>
-                                    <a href="index.html"> Home </a><span class="bread-slash"> / </span>
+                                    <a href="{{url('/')}}"> Home </a><span class="bread-slash"> / </span>
                                 </li>
                                 <li>
                                     <span class="bread-blod"> All Branches </span>
@@ -57,7 +57,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="student-inner-std res-mg-b-30">
                     <div class="student-img">
-                        <img src="img/branch/1.jpg" alt="" />
+                        <img src="{{$singlebranch->image_path}}" alt="" /> 
                     </div>
                     <div class="student-dtl">
                         <h2> {{$singlebranch->branchName}} </h2>

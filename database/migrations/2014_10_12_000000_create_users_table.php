@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('mobile', 255)->nullable();
             $table->string('job', 255)->nullable();
             $table->dateTime('lock_date', 6)->nullable();
-            $table->timestamp('email_verified_at')->nullable();
+          
             $table->tinyInteger('active')->nullable();
 
             $table->rememberToken();

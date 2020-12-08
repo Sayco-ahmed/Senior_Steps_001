@@ -10,19 +10,11 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="breadcome-list">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right">
-                            <div class="breadcome-heading pull-right">
-                                <form role="search" class="sr-input-func">
-                                    <input type="text" placeholder="...search " class="search-int form-control"
-                                        style="text-align:left" name="branch_search">
-                                    <a href="#"><i class="fa fa-search"></i></a>
-                                </form>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
                             <ul class="breadcome-menu pull-left" style="direction: ltr;">
                                 <li>
-                                    <a href="index.html"> Home </a><span class="bread-slash"> / </span>
+                                    <a href="{{route('branch.index')}}"> All Branches </a><span class="bread-slash"> / </span>
                                 </li>
                                 <li>
                                     <span class="bread-blod"> edit branch </span>
@@ -50,14 +42,14 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="sparkline16-list responsive-mg-b-30">
                         <div class="profile-img mg-b-23">
-                            <img src="{{asset('img/items/00.jpg')}}" alt="" />
+                            <img src="{{asset('uploads/branch/' . $requested_branch->branchImg)}}" alt="" class="image-preview" />
                         </div>
                         <div class="file-upload-inner ts-forms mg-b-15">
                             <div class="input prepend-big-btn">
                            
                                 <div class="file-button" style="background-color: transparent;">
                                   
-                                <input type="file" name="branchImg" onchange="document.getElementById('prepend-big-btn').value = this.value;" value="{{$requested_branch->branchImg}}">
+                                <input type="file" name="branchImg"  value="{{$requested_branch->branchImg}}" class="image" >
                                 </div>
                                 <!-- <input type="text" id="prepend-big-btn" placeholder="" autofocus type="button" > -->
                             </div>
@@ -125,4 +117,20 @@
 </div>
 @endsection
 
+@section('this_page_scripts')
+<script>
+ $(".image").change(function () {
+
+     if (this.files && this.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('.image-preview').attr('src', e.target.result);
+        }
+       reader.readAsDataURL(this.files[0]);
+    }
+
+ });
+</script>
+@endsection
 

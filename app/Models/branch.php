@@ -20,7 +20,13 @@ class branch extends Model
 
 
 
+    protected $appends = ['image_path'] ;
 
+    public function getImagePathAttribute(){
+
+
+        return asset('uploads/branch/' . $this->branchImg);
+    }
 
 
 }
