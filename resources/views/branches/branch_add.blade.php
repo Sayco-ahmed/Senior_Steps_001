@@ -34,6 +34,7 @@
     <div class="container">
 
         @include('errors.errors')
+        
 
     <form action="{{url('branch')}}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}

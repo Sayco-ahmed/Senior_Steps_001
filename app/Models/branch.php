@@ -18,7 +18,9 @@ class branch extends Model
         'branchImg'
     ];
 
-
+    // protected $attributes = [
+    //     'branchImg' => ['default_branch.png']
+    // ];
 
     protected $appends = ['image_path'] ;
 

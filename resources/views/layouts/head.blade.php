@@ -64,6 +64,11 @@
 	<!-- responsive CSS
 		============================================ -->
 	<link rel="stylesheet" href=" {{ asset('css/responsive.css')}}">
+		<!-- Noty
+		============================================ -->
+		<link rel="stylesheet" href=" {{ asset('css/noty.css')}}">
+		<script src="{{asset('js/noty.min.js')}}"></script>
+
 	<!-- modernizr JS
 		============================================ -->
 	<script src="{{asset('js/vendor/modernizr-2.8.3.min.js')}}"></script>

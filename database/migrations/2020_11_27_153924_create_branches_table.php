@@ -19,7 +19,7 @@ class CreateBranchesTable extends Migration
             $table->string('branchName', 250)->nullable();
             $table->text('branchAddress')->nullable();
             $table->text('branchMapUrl')->nullable();
-            $table->text('branchImg')->default('default_branch.png');
+            $table->string('branchImg')->default('default_branch.png');
             $table->timestamps();
         });
     }

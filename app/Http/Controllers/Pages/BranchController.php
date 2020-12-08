@@ -72,6 +72,8 @@ class BranchController extends Controller
     }
         branch::create($request_data);
 
+        session()->flash('success',('Branch added successfully'));
+
         return redirect('/branch');
 
     

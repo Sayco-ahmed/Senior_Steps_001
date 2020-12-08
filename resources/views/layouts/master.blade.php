@@ -6,9 +6,13 @@
 
 @include('layouts.header')
 
+
 @yield('breadcome-area')
 
+
 @yield('maincontent')
+
+@include('errors.noty')
 
 
 @include('layouts.footer')
