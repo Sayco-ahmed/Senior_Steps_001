@@ -146,6 +146,9 @@ class BranchController extends Controller
         
         $branch->fill($request_data)->save();
 
+        session()->flash('success',('Branch Edited successfully'));
+
+
         return redirect()->route('branch.index');
     }
 
@@ -165,6 +168,9 @@ class BranchController extends Controller
         }
 
         $branch->delete();
+
+        session()->flash('success',('Branch Deleted successfully'));
+
 
         return redirect('/branch');
     }
